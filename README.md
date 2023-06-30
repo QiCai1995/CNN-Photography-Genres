@@ -1,2 +1,2 @@
 # CNN-Photography-Genres
-Flatiron School Casptone Project on the topic of convolutional neural networking image classification
+Flatiron School Capstone Project on the topic of convolutional neural network image classification
