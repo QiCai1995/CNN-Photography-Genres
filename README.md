@@ -10,7 +10,7 @@ I am solving the problem of classifying photos into landscape and portrait genre
 
 ## Goals
 
-The business goal for classifying photography genres into landscape and portrait categories is to increase curation efficiency and productivity, as well as enhance the user experience on art gallery and online stock photography platforms. By accurately classifying photos, these platforms can streamline the process of organizing and categorizing their vast collections of images. This allows for easier search and discovery of specific genres, making it more convenient for users to find the type of photography they are interested in. Additionally, improved curation efficiency helps ensure that the platforms present high-quality and relevant content to their users, leading to enhanced user satisfaction and engagement. Ultimately, the goal is to attract more users, increase sales or engagement on the platforms, and establish a reputation for providing curated and visually appealing content.
+The business goal for classifying photography genres into landscape and portrait categories is to increase curation efficiency and productivity, as well as enhance the user experience on art galleries and online stock photography platforms. By accurately classifying photos, these platforms can streamline the process of organizing and categorizing their vast collections of images. This allows for easier search and discovery of specific genres, making it more convenient for users to find the type of photography they are interested in. Additionally, improved curation efficiency helps ensure that the platforms present high-quality and relevant content to their users, leading to enhanced user satisfaction and engagement. Ultimately, the goal is to attract more users, increase sales or engagement on the platforms, and establish a reputation for providing curated and visually appealing content.
 
 ## Data
 
@@ -20,30 +20,32 @@ Data is collected from [Kaggle](https://www.kaggle.com/datasets/arnaud58/landsca
 
 #### Data Preparation:
 
-Combining images from 2 folders to create the entire dataset using OpenCV.
-Indexing classes to 0 and 1. 0 being a landscape photograph. 1 being a portrait photograph.
-Separating features and targets, and creating 2 pickle files.
-Resizing all images to 224 pixels x 224 pixels
-Converting color images to grey scaled
-Apply Augmentation to increase the diversity of the training data including image rotation, horizontal and vertical shift, shear transformation, zoom in and out on imagse, horizontal and vertical flips.
+1. Combining images from 2 folders to create the entire dataset using OpenCV.
+   
+2. Indexing classes to 0 and 1. 0 being a landscape photograph. 1 being a portrait photograph.
+   
+3. Separating features and targets, and creating 2 pickle files.
+
+4. Resizing all images to 224 pixels x 224 pixels.
+   
+5. Converting color images to greyscale.
+
+6. Apply Augmentation to increase the diversity of the training data including image rotation, horizontal and vertical shift, shear transformation, zoom in and out on images, and horizontal and vertical flips.
 
 
-#### Data Modeling:
+#### Data Modeling: (work in progress)
 
 Dummy Model: A baseline convolutional neural net with 2 convolutional layers and 1 dense layer, without augmentation.
-Model 1: A convolutional neural net with 3 convolutional layers and 0 dense layer, with augmentation.
-Model 2: A convolutional neural net with 3 convolutional layers and 0 dense layer, with augmentation, with L2 regularization.
-Model 3: A convolutional neural net with 3 convolutional layers and 0 dense layer, with augmentation, with Dropout.
+
+Model 1: A convolutional neural net with 3 convolutional layers and 0 dense layers, with augmentation.
+
+Model 2: A convolutional neural net with 3 convolutional layers and 0 dense layers, with augmentation, with L2 regularization.
+
+Model 3: A convolutional neural net with 3 convolutional layers and 0 dense layers, with augmentation, with Dropout.
 
 
 
-Lastly, we moved on to modeling. 
-We defined our target as positive or negative emotions. Features are tokenized words from tweets.
-We started off by creating a pipelines for dummy classifier as our baseline model, the pipeline includes preprocessing steps, SMOTE for class imbalance in our dataset, and instantiating the model. We tried various models including random forest, logistic regression classifier, Decision Tree, K-nearest Neighbor, and Naive Bayes classifier. Also used GridSearch to find the optimal parameters.
-
-
-
-## Evaluation
+## Evaluation (work in progress)
 
 The best model was Model 1 with 3 convolutional layers, 0 dense layer, with augmentation. The accuracy is 98%. Compared to the baseline dummy model, accuracy has improved by x%
 
@@ -75,8 +77,10 @@ Metadata Enrichment: Use the predictions of your model to automatically assign o
 ## Next Steps
 
 Continuously evaluate and monitor the model's performance to ensure it maintains high accuracy over time. 
+
 Fine-tuning or retraining the model periodically with new data may also be necessary to adapt to evolving trends and changes in user preferences.
-Expand generes into human portrait, animal portrait, natural landscape, and urban landscape for more specific categories.
+
+Expand genres into human portrait, animal portrait, natural landscape, and urban landscape for more specific categories.
 
 
 
