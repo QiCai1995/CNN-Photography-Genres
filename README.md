@@ -1,10 +1,9 @@
 # Classifying Photography Genres Using Convolutional Neural Networks
 
-#### Author: Qi Cai
 
 ## Project Overview
 
-I am solving the problem of classifying photos into landscape and portrait genres for art galleries and online stock photography platforms. I utilized a dataset sourced from Kaggle and Unsplash to train our model. Our model achieves an impressive accuracy of 98% in accurately predicting whether a photograph belongs to the landscape or portrait category. This high accuracy demonstrates the effectiveness of our model in improving curation efficiency, productivity, and enhancing user experience in these platforms.
+I am solving the problem of classifying photos into landscape and portrait genres for art galleries and online stock photography platforms. I utilized a dataset sourced from Kaggle and Unsplash to train my model. My model achieves an impressive accuracy of 97.7% in correctly predicting whether a photograph belongs to the landscape or portrait categories. This high accuracy demonstrates the effectiveness of my model in improving curation efficiency, productivity, and enhancing user experience in these platforms.
 
 <img src="https://imgur.com/0O23VOV.png">
 
@@ -33,29 +32,30 @@ Data is collected from [Kaggle](https://www.kaggle.com/datasets/arnaud58/landsca
 6. Apply Augmentation to increase the diversity of the training data including image rotation, horizontal and vertical shift, shear transformation, zoom in and out on images, and horizontal and vertical flips.
 
 
-#### Data Modeling: (work in progress)
+#### Data Modeling:
 
-Dummy Model: A baseline convolutional neural net with 2 convolutional layers and 1 dense layer, without augmentation.
+Dummy Model: A dummy classifier has a 48% accuracy on predicting correctly if a photograph is classified as landscape.
 
-Model 1: A convolutional neural net with 3 convolutional layers and 0 dense layers, with augmentation.
+Model 1: A convolutional neural net with 2 convolutional layers and 1 dense/hidden layers, without augmentation.
+Model 1A: A convolutional neural net with 2 convolutional layers and 1 dense/hidden layers, with augmentation.
 
-Model 2: A convolutional neural net with 3 convolutional layers and 0 dense layers, with augmentation, with L2 regularization.
+Model 2: A convolutional neural net with 3 convolutional layers and 0 dense layers, with augmentation.
 
-Model 3: A convolutional neural net with 3 convolutional layers and 0 dense layers, with augmentation, with Dropout.
+Model 3: A convolutional neural net with 3 convolutional layers and 0 dense layers, with augmentation, with L2 Ridge Regularization.
 
 
 
 ## Evaluation (work in progress)
 
-The best model was Model 1 with 3 convolutional layers, 0 dense layer, with augmentation. The accuracy is 98%. Compared to the baseline dummy model, accuracy has improved by x%
+The best model was Model 3 with 3 convolutional layers, 0 dense layer, with augmentation and Ridge regularization. The accuracy is 97.7%. Compared to the baseline dummy model, model accuracy has improved by 49.5%.
 
-Confusion Matrix
+Confusion Matrix on Testing Data
 
-<img src="" width=50% height=50%> 
+<img src="https://imgur.com/bw3ONQy.png" width=50% height=50%> 
 
-Classification Report
+Classification Report on Testing Data
 
-<img src=" " width=50% height=50%>
+<img src="https://imgur.com/1E9xuNU.png" width=50% height=50%>
 
 
 
@@ -91,7 +91,7 @@ Expand genres into human portrait, animal portrait, natural landscape, and urban
 
 [Presentation](https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/Presentation.pdf)
 
-
+[Model Deployment]( )
 
 
 
