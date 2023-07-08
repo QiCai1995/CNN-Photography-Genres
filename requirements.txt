@@ -3,3 +3,4 @@ numpy==1.22.3
 scikit_learn==1.2.2
 streamlit==1.14.1
 tensorflow==2.9.0
+Opencv-python==1.22.3
