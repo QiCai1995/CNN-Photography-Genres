@@ -3,9 +3,9 @@
 
 ## Project Overview
 
-I am solving the problem of classifying photos into landscape and portrait genres for art galleries and online stock photography platforms. I utilized a dataset sourced from Kaggle and Unsplash to train my model. My model achieves an impressive accuracy of 97.7% in correctly predicting whether a photograph belongs to the landscape or portrait categories. This high accuracy demonstrates the effectiveness of my model in improving curation efficiency, productivity, and enhancing user experience in these platforms.
+I am solving the problem of classifying photography into landscape and portrait genres for art galleries and online stock photography platforms. I utilized an image dataset sourced from Kaggle and Unsplash to train my model. My model achieves an impressive accuracy of 99% in correctly predicting whether a photograph belongs to the landscape or portrait categories. This high accuracy demonstrates the effectiveness of my model in improving curation efficiency and enhancing the user experience on stock photography platforms.
 
-<img src="https://imgur.com/0O23VOV.png">
+<img src="https://imgur.com/0O23VOV.png" width = 60% height = 60%>
 
 ## Goals
 
@@ -13,13 +13,15 @@ The business goal for classifying photography genres into landscape and portrait
 
 ## Data
 
-Data is collected from [Kaggle](https://www.kaggle.com/datasets/arnaud58/landscape-pictures) and [Unsplash](https://unsplash.com/s/photos/portrait), a total of 10,060 images in the genres of landscape and portrait. The images have various dimensions and resolutions
+Data is collected from [Kaggle](https://www.kaggle.com/datasets/arnaud58/landscape-pictures) and [Unsplash](https://unsplash.com/s/photos/portrait), a total of 10,060 images in the genres of landscape and portrait. The images have various dimensions and resolutions. 
+
+Data stored in my [Google Drive](https://drive.google.com/drive/folders/1OtEbHvzK9ffJZBXB_N7YlfEfumWvQTPA?usp=drive_link)
 
 ## Methods
 
 #### Data Preparation:
 
-1. Combining images from 2 folders to create the entire dataset using OpenCV.
+1. Combining images from 2 folders to create the entire dataset using OpenCV. Suffle or randomize.
    
 2. Indexing classes to 0 and 1. 0 being a landscape photograph. 1 being a portrait photograph.
    
@@ -34,7 +36,7 @@ Data is collected from [Kaggle](https://www.kaggle.com/datasets/arnaud58/landsca
 
 #### Data Modeling:
 
-Dummy Model: A dummy classifier has a 48% accuracy on predicting correctly if a photograph is classified as landscape.
+Dummy Classifier/ baseline model: A dummy classifier has a 52% accuracy meaning correctly predicting if a landscape or portrait photograph is classified correctly at a 52% rate.
 
 Model 1: A convolutional neural net with 2 convolutional layers and 1 dense/hidden layers, without augmentation.
 Model 1A: A convolutional neural net with 2 convolutional layers and 1 dense/hidden layers, with augmentation.
@@ -47,15 +49,23 @@ Model 3: A convolutional neural net with 3 convolutional layers and 0 dense laye
 
 ## Evaluation (work in progress)
 
-The best model was Model 3 with 3 convolutional layers, 0 dense layer, with augmentation and Ridge regularization. The accuracy is 97.7%. Compared to the baseline dummy model, model accuracy has improved by 49.5%.
+The final model I decided to go with was Model 2 with 3 convolutional layers, 0 dense layer, with augmentation and without regularization. The accuracy is 99%, and loss is 0.036. Compared to the baseline dummy model, model accuracy has improved by 47%.
 
-Confusion Matrix on Testing Data
+Final Model Summary
 
-<img src="https://imgur.com/bw3ONQy.png" width=50% height=50%> 
+<img src ="https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/images/Final%20Model%20Summary.png" width = 60% height = 60% >
+
+
+
+Final Model Confusion Matrix on Testing Data
+
+<img src="https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/images/Testing%20Confusion%20Matrix.png" width=50% height=50%> 
+
+
 
 Classification Report on Testing Data
 
-<img src="https://imgur.com/1E9xuNU.png" width=50% height=50%>
+<img src="https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/images/Final%20Classification%20Report.png" width=50% height=50%>
 
 
 
@@ -63,18 +73,14 @@ Classification Report on Testing Data
 
 Recommendation of Usage:
 
-Automatic Genre Classification: Implement your model as part of an automated system that automatically assigns genre labels (landscape or portrait) to incoming photographs. This can significantly reduce manual effort and increase efficiency in the curation process for art galleries and online stock photography platforms.
+Automatic Genre Classification: create an automated system that automatically assigns genre labels (landscape or portrait) to incoming photographs. This can significantly reduce manual effort and increase efficiency in the curation process for art galleries and online stock photography platforms.
 
 Content Filtering and Search: Integrate the model into the platform's search and filtering functionalities. Users can easily filter and search for specific genres, such as landscape or portrait, to find the type of photography they are looking for. This enhances user experience and improves the chances of users finding relevant content quickly.
 
-Content Recommendation: Utilize the model's predictions to provide personalized content recommendations to users. By analyzing a user's preferences and behavior, the system can suggest photographs from the preferred genre, enhancing engagement and increasing the likelihood of conversions or sales.
-
-Quality Assurance: Employ your model as a tool for quality assurance and content curation. It can assist human curators in verifying and validating genre labels, ensuring consistency and accuracy in categorizing photographs.
-
-Metadata Enrichment: Use the predictions of your model to automatically assign or enhance metadata for photographs, including genre labels. This can improve the discoverability of images and provide additional context for users.
-
 
 ## Next Steps
+
+Model Deployment, develop good UX/UI elements for photography genre classifier on an web app for an art galley/museum or stock photography platform.
 
 Continuously evaluate and monitor the model's performance to ensure it maintains high accuracy over time. 
 
@@ -87,11 +93,12 @@ Expand genres into human portrait, animal portrait, natural landscape, and urban
 
 ### Links
 
+[First Simple Model Notebook](https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/First_Simple_Model.ipynb)
+
 [Final Notebook](https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/Final_Notebook.ipynb)
 
 [Presentation](https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/Presentation.pdf)
 
-[Model Deployment]( )
 
 
 
