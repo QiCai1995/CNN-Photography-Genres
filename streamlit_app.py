@@ -12,12 +12,12 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-	model  = pickle.load(open("model3.pickle", "rb"))
-	return model
+	best_model = tf.keras.models.load_model("my_model3.h5")
+	return best_model
 
 
 def predict_class(image, model):
-    resized_image = cv2.reszie(image, (224,224))
+    resized_image = cv2.resize(image, (224,224))
     gray_image = cv2.cvtColor(resized_image, cv2.COLOR_BGR2GRAY)
     normalized_image = gray_image / 255.0
     reshaped_image = np.array(normalized_image).reshape(-1, 224, 224, 1)
