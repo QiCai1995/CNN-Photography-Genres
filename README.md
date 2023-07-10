@@ -51,15 +51,21 @@ Model 3: A convolutional neural net with 3 convolutional layers and 0 dense laye
 
 The final model I decided to go with was Model 2 with 3 convolutional layers, 0 dense layer, with augmentation and without regularization. The accuracy is 99%, and loss is 0.036. Compared to the baseline dummy model, model accuracy has improved by 47%.
 
+
+
 Final Model Summary
 
 <img src ="https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/images/Final%20Model%20Summary.png" width = 60% height = 60% >
 
 
 
+
+
 Final Model Confusion Matrix on Testing Data
 
 <img src="https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/images/Testing%20Confusion%20Matrix.png" width=50% height=50%> 
+
+
 
 
 
