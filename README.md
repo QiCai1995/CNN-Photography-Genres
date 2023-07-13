@@ -21,7 +21,7 @@ Data stored in my [Google Drive](https://drive.google.com/drive/folders/1OtEbHvz
 
 #### Data Preparation:
 
-1. Combining images from 2 folders to create the entire dataset using OpenCV. Suffle or randomize.
+1. Combining images from 2 folders to create the entire dataset using OpenCV. Shuffle or randomize.
    
 2. Indexing classes to 0 and 1. 0 being a landscape photograph. 1 being a portrait photograph.
    
@@ -38,8 +38,8 @@ Data stored in my [Google Drive](https://drive.google.com/drive/folders/1OtEbHvz
 
 Dummy Classifier/ baseline model: A dummy classifier has a 52% accuracy meaning correctly predicting if a landscape or portrait photograph is classified correctly at a 52% rate.
 
-Model 1: A convolutional neural net with 2 convolutional layers and 1 dense/hidden layers, without augmentation.
-Model 1A: A convolutional neural net with 2 convolutional layers and 1 dense/hidden layers, with augmentation.
+Model 1: A convolutional neural net with 2 convolutional layers and 1 dense/hidden layer, without augmentation.
+Model 1A: A convolutional neural net with 2 convolutional layers and 1 dense/hidden layer, with augmentation.
 
 Model 2: A convolutional neural net with 3 convolutional layers and 0 dense layers, with augmentation.
 
@@ -47,9 +47,9 @@ Model 3: A convolutional neural net with 3 convolutional layers and 0 dense laye
 
 
 
-## Evaluation (work in progress)
+## Evaluation
 
-The final model I decided to go with was Model 2 with 3 convolutional layers, 0 dense layer, with augmentation and without regularization. The accuracy is 99%, and loss is 0.036. Compared to the baseline dummy model, model accuracy has improved by 47%.
+The final model I decided to go with was Model 2 with 3 convolutional layers, 0 dense layers, with augmentation, without regularization. The accuracy is 99%, and the loss is 0.036. Compared to the baseline dummy model, model accuracy has improved by 47%.
 
 
 
@@ -86,7 +86,7 @@ Content Filtering and Search: Integrate the model into the platform's search and
 
 ## Next Steps
 
-Model Deployment, develop good UX/UI elements for photography genre classifier on an web app for an art galley/museum or stock photography platform.
+Model Deployment, develop good UX/UI elements for a photography genre classifier on a web app for an art gallery/museum or stock photography platform.
 
 Continuously evaluate and monitor the model's performance to ensure it maintains high accuracy over time. 
 
