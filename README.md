@@ -99,12 +99,8 @@ Expand genres into human portrait, animal portrait, natural landscape, and urban
 
 ### Links
 
-[First Simple Model Notebook](https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/First_Simple_Model.ipynb)
-
 [Final Notebook](https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/Final_Notebook.ipynb)
 
 [Presentation](https://github.com/QiCai1995/CNN-Photography-Genres/blob/main/Presentation.pdf)
-
-
 
 
