@@ -1,4 +1,4 @@
-# Classifying Photography Genres Using Convolutional Neural Networks
+# Classifying Photography Genres Using Convolutional Neural Network
 
 
 ## Project Overview
