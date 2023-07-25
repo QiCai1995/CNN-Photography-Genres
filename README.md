@@ -27,7 +27,7 @@ Data stored in my [Google Drive](https://drive.google.com/drive/folders/1OtEbHvz
    
 3. Separating features and targets, and creating 2 pickle files.
 
-4. Resizing all images to 224 pixels x 224 pixels.
+4. Resize all images to 224 pixels x 224 pixels.
    
 5. Converting color images to greyscale.
 
